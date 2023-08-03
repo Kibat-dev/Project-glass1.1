@@ -13,19 +13,30 @@
 </head>
 <body>
     <script>
-        function zoomIn() {
-  const conteudo = document.querySelector('.conteudo');
-  conteudo.style.zoom = parseFloat(getComputedStyle(conteudo).zoom) + 0.1;
+       let zoomLevel = 1; // 1 significa 100% (tamanho original)
+
+function zoomIn() {
+  zoomLevel += 0.1;
+  aplicarZoom();
 }
 
 function zoomOut() {
-  const conteudo = document.querySelector('.conteudo');
-  conteudo.style.zoom = parseFloat(getComputedStyle(conteudo).zoom) - 0.1;
+  zoomLevel -= 0.1;
+  aplicarZoom();
 }
 
-        
-    </script>
+function aplicarZoom() {
+  const conteudo = document.querySelector('.conteudo');
+  conteudo.style.transform = `scale(${zoomLevel})`;
+}
     
+    </script>
+
+    <button onclick="zoomIn()">Aumentar zoom</button>
+    <button onclick="zoomOut()">Diminuir zoom</button>
+
+    <div class="conteudo"/> 
+
     <div id="interface">
         <header id ="cabecalho">
 
