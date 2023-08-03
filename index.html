@@ -18,7 +18,21 @@
     <!-- Seu conteúdo aqui -->
   </div>
   
-  <script src="script.js"></script>
+  <script src="script.js">
+      let zoomed = false;
+
+function toggleZoom() {
+  const conteudo = document.querySelector('.conteudo');
+  
+  if (zoomed) {
+    conteudo.style.transform = 'scale(1)';
+  } else {
+    conteudo.style.transform = 'scale(1.5)'; 
+  }
+  
+  zoomed = !zoomed;
+}
+  </script>
 
     <button onclick="zoomIn()">Aumentar zoom</button>
     <button onclick="zoomOut()">Diminuir zoom</button>
