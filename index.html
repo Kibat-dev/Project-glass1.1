@@ -12,6 +12,20 @@
 
 </head>
 <body>
+    <script>
+        function zoomIn() {
+  const conteudo = document.querySelector('.conteudo');
+  conteudo.style.zoom = parseFloat(getComputedStyle(conteudo).zoom) + 0.1;
+}
+
+function zoomOut() {
+  const conteudo = document.querySelector('.conteudo');
+  conteudo.style.zoom = parseFloat(getComputedStyle(conteudo).zoom) - 0.1;
+}
+
+        
+    </script>
+    
     <div id="interface">
         <header id ="cabecalho">
 
