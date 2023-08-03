@@ -1,7 +1,9 @@
 body{
     background-color: rgb(240, 240, 240);
     color: rgba(0, 0, 0, 1);
-
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 
 
 }
@@ -37,4 +39,17 @@ figure.foto-legenda figcaption{
 figure.foto-legenda figcaption:hover{
     opacity: 1;
 
+}
+.zoom-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.conteudo {
+  width: 100%;
 }
