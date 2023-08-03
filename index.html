@@ -12,25 +12,13 @@
 
 </head>
 <body>
-    <script>
-       let zoomLevel = 1; // 1 significa 100% (tamanho original)
-
-function zoomIn() {
-  zoomLevel += 0.1;
-  aplicarZoom();
-}
-
-function zoomOut() {
-  zoomLevel -= 0.1;
-  aplicarZoom();
-}
-
-function aplicarZoom() {
-  const conteudo = document.querySelector('.conteudo');
-  conteudo.style.transform = `scale(${zoomLevel})`;
-}
-    
-    </script>
+      <div class="zoom-button" onclick="toggleZoom()">Zoom</div>
+  
+  <div class="conteudo">
+    <!-- Seu conteúdo aqui -->
+  </div>
+  
+  <script src="script.js"></script>
 
     <button onclick="zoomIn()">Aumentar zoom</button>
     <button onclick="zoomOut()">Diminuir zoom</button>
